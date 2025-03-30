@@ -61,11 +61,11 @@ p {
 }
 
 .large {
-  height: 5px;
+  height: 3px;
 }
 
 .medium {
-  height: 3px;
+  height: 2px;
 }
 
 .large, .medium {
@@ -98,3 +98,12 @@ p {
 .right {
     justify-content: flex-end;
 }
+
+.indent {
+    margin-left: 1em;
+}
+
+.daily-value p:not(.no-divider) {
+    border-bottom: 1px solid #44475A;
+}
+

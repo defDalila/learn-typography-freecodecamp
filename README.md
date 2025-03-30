@@ -538,3 +538,45 @@ A tipografia muitas vezes envolve um equilíbrio entre regras técnicas e ajuste
 6. **Fonte Apropriada** – Escolha uma tipografia que combine com o tom do projeto e garanta boa leitura em telas pequenas e grandes.  
 
 Pequenos ajustes visuais podem fazer uma grande diferença na apresentação geral do conteúdo. 🎨
+
+
+## `:not()`
+
+O pseudo-seletor `:not()` é útil para estilizar elementos enquanto exclui determinados casos específicos. Ele permite aplicar regras de CSS a todos os elementos que **não** correspondem ao seletor dentro dos parênteses.
+
+### **Exemplo de uso do `:not()`**
+```css
+/* Seleciona todos os parágrafos que não têm a classe "destaque" */
+p:not(.destaque) {
+  color: gray;
+  font-style: italic;
+}
+```
+Nesse caso, todos os `<p>` terão o texto em cinza e itálico, **exceto** os que possuem a classe `.destaque`.
+
+### **Usos comuns do `:not()`**
+1. **Excluindo um elemento específico**
+   ```css
+   li:not(:first-child) {
+     margin-left: 10px;
+   }
+   ```
+   Isso adiciona margem à esquerda para todos os `<li>`, **exceto o primeiro**.
+
+2. **Evitando a estilização de elementos dentro de um container**
+   ```css
+   .menu-item:not(.ativo) {
+     opacity: 0.5;
+   }
+   ```
+   Aqui, todos os itens do menu terão opacidade reduzida, **exceto** os que possuem a classe `.ativo`.
+
+3. **Combinando múltiplas regras**
+   ```css
+   div:not(.box, .container) {
+     border: 1px solid red;
+   }
+   ```
+   Isso aplica uma borda vermelha a todas as `<div>`, **exceto** aquelas com `.box` ou `.container`.
+
+O `:not()` é poderoso porque permite criar regras mais flexíveis, sem precisar sobrescrever estilos com `!important` ou criar seletores complexos.
