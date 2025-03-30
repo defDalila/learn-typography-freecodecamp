@@ -34,8 +34,17 @@ h1 {
 }
 
 .label {
-    border: 3px solid #44475A;
+    border: 3px solid #282a36;
     width: fit-content;
     margin: 20px auto;
     padding: 0 7px;
 }
+
+p {
+    margin: 0;
+}
+
+.divider {
+  border-bottom: 2px solid #acafcb;
+  margin: 2px 0;
+}   
